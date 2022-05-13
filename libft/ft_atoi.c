@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static void ft_error(char *str)
+static void ft_error(const char *str)
 {
 	while (*str)
 	{
@@ -46,6 +46,7 @@ int	ft_atoi(const char *str)
 		sum = sum * 10 + (*str - '0');
 		str++;
 	}
+	ft_error(str);
 	if (sum > 2147483648 && count == -1)
 		return (0);
 	else if (sum > 2147483647 && count == 1)
