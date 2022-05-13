@@ -12,6 +12,19 @@
 
 #include "libft.h"
 
+static void ft_error(char *str)
+{
+	while (*str)
+	{
+		if (*str != 32)
+		{
+			ft_putendl("Enter correct pid \n", 2);
+			exit (1);
+		}
+		str++;
+	}
+}
+
 int	ft_atoi(const char *str)
 {
 	int				count;
